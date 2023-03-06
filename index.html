@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <!-- Recommended order for implementation: -->
+  <!------------------------------------------->
+  <!-- add rules to styles.css that hide all section tags under main not having a class of 'active' -->
+  <!-- scheduler (js file) -->
+  <!-- homeView (js file, html below & css) -->
+  <!-- calendartView (js file, html below & css) -->
+  <!-- appointmentView (js file, html below & css) -->
+
+  <!-- Other notes -->
+  <!----------------->
+  <!-- To run your project in the browser, simply open Index.html with Chrome. You will need to refresh your page to see each change you make. -->
+  <!-- Keep your Chrome Dev Tools open the entire time. Use the debugger feature, leverage the console to test your "app" object and be sure to watch for console errors. -->
+
+  <head>
+    <!-- Go out to https://fonts.google.com/ and follow instructions to use font 'Source Sans Pro'-->
+    <!-- You will need to add your reference to Google's font api before your local stylesheet. -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      var app;
+    </script>
+
+    <script src="scripts/viewer.js"></script>
+    <script src="scripts/scheduler.js"></script>
+    <script src="scripts/views/calendar.js"></script>
+    <script src="scripts/views/home.js"></script>
+    <script src="scripts/views/appointment.js"></script>
+  </head>
+
+  <body onload="app.homeView.load()">
+    <header>
+      <h1>Tutoring Center</h1>
+    </header>
+    <main>
+      <section id="homeView">
+        <h2>OUR TUTORS</h2>
+        <div class="profiles">
+          <template id="profile-template">
+            <div class="profile">
+              <h2></h2>
+              <p></p>
+              <button class="schedule">View Schedule</button>
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <section id="calendarView">
+        <h2></h2>
+        <p>Tutoring hours are Monday-Thursday from 5pm-7pm</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Availabilty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td id="Monday"></td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td id="Tuesday"></td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td id="Wednesday"></td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td id="Thursday"></td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" id="back">Return to List</button>
+      </section>
+
+      <section id="appointmentView">
+        <!-- Form to collect name (input) and notes (textarea) goes here -->
+        <h2>NEW APPOINTMENT</h2>
+        <form id="appointmentForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+        </form>
+        <button type="button" id="cancel">Cancel</button>
+        <!-- Cancel button calls app.homeView.load() -->
+        <button type="button" id="book">Book</button>
+        <!-- Book button calls app.appointmentView.save() -->
+      </section>
+    </main>
+  </body>
+</html>

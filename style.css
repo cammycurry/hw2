@@ -1,0 +1,138 @@
+main section:not(.active) {
+  display: none;
+}
+
+.profile {
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  margin: 10px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.profiles .schedule {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.skill {
+  background-color: #c9c9c9;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  margin-right: 5px;
+  font-size: small;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: gray;
+  color: white;
+}
+
+th,
+td {
+  border: 1px solid #c9c9c9;
+  padding: 20px;
+}
+
+#back {
+  background-color: #c9c9c9;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid lightblue;
+  border-radius: 4px;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border: 2px solid lightblue;
+}
+
+form label {
+  text-align: left;
+  width: 100%;
+}
+
+#cancel {
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: calc(100% - 20px);
+}
+
+#book {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: calc(100% - 20px);
+}
+
+form textarea {
+  height: 25vh;
+}
